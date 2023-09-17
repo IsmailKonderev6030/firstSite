@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="./icon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <title>МагнитЭл</title>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script src="index.js"></script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("PMw9hsosSlsGJntIM");
+        })();
+        </script>
+
+    </head>
+
+<body>
+    <header class="header">
+        <!--Логотип на сайте-->
+        <a href="https://magnitel.online/">
+            <img src="/static/media/logo.svg" class="logoImg">
+        </a>
+
+        <!--Заголово сайта-->
+        <div class="logoText">
+            <p style="font-size: 35px; margin-bottom: 5px; color: #0080f8;">МагнитЭл</p>
+            <p style="font-size: 20px; margin-top: 5px;">Компоненты и материалы для производства электроники</p>
+        </div>
+
+        <!--Контакты на заголовке-->
+        <div class="contacts">
+            <a class="conButton" href="tel:+79852569818">+7 (985) 256 98 18</a>
+            <a class="conButton" href="mailto:Info@magnitel.ru">Info@magnitel.ru</a>
+        </div>
+    </header>
+
+    <!--Навигация по сайту-->
+    <div class="divNavbar">
+        <a class="navButton" href="#catal">Каталог</a>
+        <a class="navButton" href="#prod">Производители</a>
+        <a class="navButton" href="#del">Доставка</a>
+        <a class="navButton" href="#cont">Контакты</a>
+    </div>
+
+    <!--Описание компании и окно заявки-->
+    <div class="divBlockContent">
+        <!--Текс описания компании-->
+        <div class="divConText">
+            <div class="textBox">
+                <img src="/static/media/TextIcon.png" class="textConImg">
+                <p class="textCon">У нас только лучшие электронные компоненты от известных производителей</p>
+            </div>               
+            <div class="textBox">
+                <img src="/static/media/TextIcon.png" class="textConImg">
+                <p class="textCon">Работаем без посредников, предлагаем лучшее соотношение цены и качества</p>
+            </div>
+            <div class="textBox">
+                <img src="/static/media/TextIcon.png" class="textConImg">
+                <p class="textCon">Всё официально, есть все необходимые сертификаты</p>
+            </div>
+            <div class="textBox">
+                <img src="/static/media/TextIcon.png" class="textConImg">
+                <p class="textCon">Готовы всегда ответить на ваши вопросы</p>
+            </div>
+        </div>
+
+        <!--Окно заявки-->
+
+        <form id="app" class="appWindow">
+            <input id="name" type="text" name="appName" placeholder="Ваше имя*" class="textInput" required>
+            <input id="email" type="text" name="appEmail" placeholder="Ваш Email" class="textInput">
+            <input id="phone" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="appPhone" placeholder="Введите телефон*" class="textInput" required>
+            <input id="text" type="text" name="appMessage" placeholder="Введите партийный номер" class="textInput">
+            <button type="button" class="buttonApp" onclick="sendMail()">Заказать</button>
+        </form>
+    </div>
+
+    <!--Основной блок каталога-->
+    <div class="divCatalog">
+        <p id="catal" style="font-size: 40px; margin-block-start: 15px;">Каталог товаров</p>
+
+        <!--Первый блок в каталоге-->
+        <div class="rowBlockCatalog">
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/tran.png">
+
+                <p>АКТИВНЫЕ ЭЛЕМЕНТЫ</p>
+                <p>микросхемы, транзисторы, тиристоры, диоды и т.д.</p>
+
+                <a href="#app" class="buttonOrder">Заказать</a>
+            </div>
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/konde.png">
+
+                <p>ПАССИВНЫЕ ЭЛЕМЕНТЫ</p>
+                <p>конденсаторы, трансформаторы, резисторы и т.д.</p>
+
+                <a href="#app" class="buttonOrder">Заказать</a>
+            </div>
+        </div>
+
+        <!--Второй блок в каталоге-->
+        <div class="rowBlockCatalog">
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/acust.jpg">
+
+                <p>АКУСТИЧЕСКИЕ КОМПОНЕНТЫ</p>
+                <p>микрофоны, излучатели звука, динамики, сирены</p>
+
+                <a href="#app" class="buttonOrder">Заказать</a>
+            </div>
+
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/rele.jpg">
+
+                <p>РЕЛЕ</p>
+                <p>электромагнитные, твердотельные, герконовые, промежуточные, интерфейсовые и т.д.</p>
+
+                <a href="#app" class="buttonOrder">Заказать</a>
+            </div>
+        </div>
+
+        <!--Третий блок в каталоге-->
+        <div class="rowBlockCatalog">
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/predo.jpg">
+
+                <p>УСТРОЙСТВА ЗАЩИТЫ, ПРЕДОХРАНИТЕЛИ</p>
+                <p>варисторы, термопредохранители, термостаты и т.д.</p>
+
+                <a href="#app" class="buttonOrder">Заказать</a>
+            </div>
+            <!--Блоки с товаром (фото, описание, заказ)-->
+            <div class="productBox">
+                <img class="catalogImg" src="/static/media/any.jpg">
+
+                <p>ДЕФИЦИТНАЯ ПРОДУКЦИЯ И МНОГОЕ ДРУГОЕ</p>
+                <p>паяльное оборудование, провода, измерительные приборы и т.д.</p>
+
+                <a href="#app" class="buttonOrder" id="openOrderWindow">Заказать</a>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+    <!--Данные о производителях-->
+    <div id="prod" class="divProducer">
+        <p style="text-align: center; font-size: 40px; color: aliceblue; margin: 0px 0px 50px 0px;">Наши Производители</p>
+        <div class="producerImg">
+            <img src="/static/media/proizvo.gif" style="width: 500px; height: 300px;">
+        </div>
+    </div>
+
+    <!--Блок о доставки-->
+    <div id="del" class="divDelive">
+        <p style="font-size: 40px; width: 300px; text-align: center;">Доставим ваш заказ в любой регион России</p>
+        <img src="/static/media/mapRussian.png" style="width: 500px; height: 350px;">
+
+        <!--Описание о доставке-->
+        <div class="divDeliveText">
+            <p class="textDelive">Бережно упакуем ваш заказ в противоударный наполнитель</p>
+            <p class="textDelive">В любой день недели, даже в праздничные дни</p>
+            <p class="textDelive">Созвонимся в день заказа, уточним детали посылки и адрес доставки</p>
+        </div>
+    </div>
+
+    <!--Блок с контактами-->
+    <div id="cont" class="divContacts">
+        <p style="font-size: 40px; color: #ffffff;">Наши Контакты</p>
+
+        <div class="divContactsText">
+            <!--Данные компании-->
+            <div class="divTextContacts">
+                <p class="textContacts">ООО "Магнитэл"</p>
+
+                <p class="textContacts">ИНН 7734482054 КПП 773401001 
+                    ОГРН 1237700523609</p>
+            </div>
+            <!--Режимы работы-->
+            <div class="divTextContacts">
+                <p class="textContacts">Режим работы: Пн-Пт с 9-00 до 18-00
+                    Сб-Вс - выходной</p>
+
+                <a class="textContacts" href="tel:+79852569818">+7 (985) 256 98 18</a>
+                <a class="textContacts" href="mailto:Info@magnitel.ru">Info@magnitel.ru</a>
+            </div>
+            <!--Юр Адрес-->
+            <div class="divTextContacts">
+                <p class="textContacts">123182, город Москва, ул Академика Бочвара, д. 6, помещ. 1/1</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--Всплывающее окно заказа-->
+
+    </div>
+</body>
+
+</html>

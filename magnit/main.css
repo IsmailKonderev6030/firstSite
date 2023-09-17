@@ -1,0 +1,373 @@
+body{
+    /*Плавное проявление сайта*/
+    opacity: 0;
+    transition: 1s;
+    animation: show 2s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+
+    /*Что бы сайт не мог ужиматься*/
+    padding: 0;
+    margin: 0;
+    min-width: max-content;
+}
+
+html {
+    /*Для плавного скролинга по сайту*/
+    scroll-behavior: smooth;
+}
+
+/*Голова сайта*/
+/************************************************************/
+.header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px 20px 30px;
+}
+
+.logoImg{
+    width: 150px;
+    height: 100px;
+    margin-right: 100px;
+}
+
+.logoText{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    color: #525252;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.conButton{
+    text-decoration: none;
+    color: #525252;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*Навигационая панель*/
+/************************************************************/
+.divNavbar{
+    background-color: #0080f8db;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px 15px 0px;
+    position: sticky;
+    top: 0;
+}
+
+.navButton{
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    margin-left: 70px;
+}
+
+/*Описание компании и окно заявки*/
+/************************************************************/
+.divBlockContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-image: url("/static/media/backMainText.png");
+    background-size: cover;
+    margin-top: 10px;
+}
+
+.divConText{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.textBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.textConImg{
+    width: 25px;
+    height: 25px;
+}
+
+.textCon{
+    font-size: 25px;
+    font-style: oblique;
+    text-align: center;
+    color: aliceblue;
+    margin-left: 5px;
+    width: 400px;
+}
+
+/*Окно заявки*/
+.appWindow{
+    width: 300px;
+    height: 500px;
+    margin: 20px 0px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #ffffffcc;
+}
+
+.textInput{
+    color: black;
+    font-size: 16px;
+    border: 1.5px solid #0080f8;
+    border-radius: 10px;
+    background-color: #ffffff00;
+    padding: 10px;
+}
+
+.buttonApp{
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #0080f8;
+    border: 0px;
+    border-radius: 7px;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+}
+
+.buttonApp:active{
+    background: #1b4369;
+    box-shadow: 0 3px #1b4369 inset;
+}
+
+/*Каталог товаров*/
+/************************************************************/
+.divCatalog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 100px 10px 100px;
+    padding: 5px;
+}
+
+.rowBlockCatalog{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    width: 700px; 
+    margin-bottom: 30px;
+}
+
+.productBox{
+    width: 320px;
+    height: 450px;
+    border: 1px solid #0080f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.productBox p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.catalogImg{
+    width: 200px;
+    height: 250px;
+}
+
+.buttonOrder{
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border: 0px;
+    border-radius: 7px;
+    width: 120px;
+    background-color: #0080f8;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    text-decoration: none;
+}
+
+/*Производитель*/
+/************************************************************/
+.divProducer{
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    height: 500px;
+    background-color: #0080f8db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Доставка*/
+/************************************************************/
+.divDelive{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divDeliveText{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items :flex-start;
+    justify-content: space-around;
+}
+
+.textDelive{
+    font-size: 20px;
+    width: 220px;
+    border-top: 1px groove #0080f8;
+    text-align: justify
+}
+
+/*Контакты и режим работы*/
+/************************************************************/
+.divContacts{
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    background-color: #0080f8db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divContactsText{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.divTextContacts{
+    font-size: 20px;
+    width: 220px;
+    border-top: 1px groove #0080f8;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textContacts{
+    text-decoration: none;
+    color: white;
+    width: 220px;
+}
+
+/*Часть кода для плавного проявления сайта*/
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*Для мобильно версии сайта*/
+/************************************************************/
+@media (min-width: 320px) and (max-width: 550px) {
+
+/*Головая сайта*/
+/************************************************************/
+.header{
+    flex-direction: column;
+}
+
+.logoImg{
+    margin: 0px;
+}
+
+.logoText p{
+    text-align: center;
+    width: 250px;
+}
+
+.contacts{
+    margin: 0;
+}
+
+/*Навигационая панель*/
+/************************************************************/
+.divNavbar a{
+    font-size: 20px;
+    margin: 0px 10px 0px 0px;
+}
+
+/*Описание компании и окно заявки*/
+/************************************************************/
+.divConText{
+    margin: 0;
+}
+
+.divBlockContent{
+    flex-direction: column; 
+    padding-bottom: 20px;
+}
+
+.textCon{
+    width: 250px;
+}
+
+.appWindow{
+    margin: 10px 0px 0px 0px;
+}
+
+/*Каталог товаров*/
+/************************************************************/
+.rowBlockCatalog{
+    flex-direction: column;
+    width: max-content;
+    height: 970px;
+}
+
+/*Производитель*/
+/************************************************************/
+.divProducer{
+    width: 100%;
+}
+
+/*Доставка*/
+/************************************************************/
+.divDeliveText{
+    flex-direction: column;
+    align-items :center;
+    width: 300px;
+}
+
+/*Контакты и режим работы*/
+/************************************************************/
+.divContactsText{
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+}
